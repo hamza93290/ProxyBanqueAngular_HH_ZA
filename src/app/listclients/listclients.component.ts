@@ -22,6 +22,7 @@ constructor( private cs: ClientsService) {}
   }
 
   deleteClient(id:Number){
+    console.log("et oui");
     
   }
 
