@@ -1,0 +1,22 @@
+<app-navbar></app-navbar>
+<div>  
+<table class="table table-bordered">
+<thead class="bg-info text-center">
+  <tr>
+    <th colspan="3" style="font-size: 1.5em;">Liste des Comptes Courant a découvert</th>
+  </tr>
+  <tr>
+    <th scope="col">Numéro de compte</th>
+    <th scope="col">découvert</th>
+    <th scope="col">Date de creation</th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor=" let compte of comptes" >
+    <td style="text-align: center;">{{compte.numCompte}}</td>
+    <td style="text-align: center;">{{compte.solde}}</td>
+    <td style="text-align: center;">{{compte.creationDate}}</td>
+  </tr>
+</tbody>
+</table>
+</div><br>

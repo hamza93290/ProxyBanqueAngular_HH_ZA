@@ -1,1 +1,35 @@
-<p>createclient works!</p>
+<app-navbar></app-navbar>
+<div class="container my-5">
+
+    <form #userForm="ngForm" (ngSubmit)="onSubmit()">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="nom">Nom</label>
+          <input type="text" [(ngModel)]="nom" name="nom" class="form-control" id="nom" placeholder="Nom....">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputPassword4">Prenom</label>
+          <input type="text" [(ngModel)]="prenom" name="prenom" class="form-control" id="prenom" placeholder="Prenom....">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputAddress">Adresse</label>
+        <input type="email" [(ngModel)]="adresse" name="adresse" class="form-control" id="adresse" placeholder="adresse.....">
+      </div>
+      <div class="form-group mb-5">
+        <label for="inputAddress2">Tel</label>
+        <input type="text" [(ngModel)]="tel" name="tel" class="form-control" id="tel" placeholder="tel...">
+      </div>
+      <div class="form-group mb-5">
+        <label for="inputAddress2">Code Postal</label>
+        <input type="text" [(ngModel)]="codePostal" name="codePostal" class="form-control" id="codePostal" placeholder="codePostal...">
+      </div>
+      <div class="form-group mb-5">
+        <label for="inputAddress2">Ville</label>
+        <input type="text" [(ngModel)]="ville" name="ville" class="form-control" id="ville" placeholder="ville...">
+      </div>
+  
+  
+      <button type="submit" class="mt-5 btn btn-primary">Créer</button>
+    </form>
+  </div>

@@ -13,13 +13,43 @@
       "postId": 1
     }
   ],
+  "compte": [
+    {
+      "id":1,
+      "id_client":2,
+      "numeroCompte": 1572,
+      "solde": 1755,
+      "decouvert": 1000
+    },
+    {
+      "id":2,
+      "id_client":1,
+      "numeroCompte": 1572,
+      "solde": 55,
+      "decouvert": 20000
+    }
+  ],
   "clients": [
     {
       "id": 1,
       "nom": "some comment",
       "prenom": "el",
-      "email":"lalalal",
-      "adresse":"175 rue de paris"
+      "email": "lalalal",
+      "adresse": "2 rue jean"
+    },
+    {
+      "id": 2,
+      "nom": "Hamzaoui",
+      "prenom": "Hamza",
+      "email": "hamzaoui.h@outlook.fr",
+      "adresse": "175 rue de paris"
+    },
+    {
+      "nom": "de",
+      "prenom": "de",
+      "email": "de",
+      "adresse": "de",
+      "id": 3
     }
   ],
   "profile": {

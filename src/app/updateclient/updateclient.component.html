@@ -1,1 +1,25 @@
-<p>updateclient works!</p>
+<app-navbar></app-navbar>
+<div class="container my-5">
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label>Nom</label>
+            <input type="text" formControlName="nom" class="form-control" placeholder="Nom...">
+          </div>
+          <div class="form-group col-md-6">
+            <label>Prenom</label>
+            <input type="text" formControlName="prenom" class="form-control" placeholder="Prenom...">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>ville</label>
+          <input type="text"  formControlName="ville" class="form-control"  placeholder="....">
+        </div>
+        <div class="form-group">
+          <label>Address</label>
+          <input type="text"  formControlName="adresse" class="form-control"  placeholder="......">
+        </div>
+       
+        <button type="submit" class="btn btn-primary">Sauvgarder</button>
+      </form>
+    </div>

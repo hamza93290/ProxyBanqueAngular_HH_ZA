@@ -1,6 +1,6 @@
 import { Component, OnInit, Output } from '@angular/core';
-import { Clients } from '../models/clients';
 import { ClientsService } from '../services/clients.service';
+import { Client } from '../models/client.model';
 
 @Component({
   selector: 'app-listclients',
@@ -10,7 +10,11 @@ import { ClientsService } from '../services/clients.service';
 export class ListclientsComponent implements OnInit {
 
 @Output()
-client!: Clients[] 
+client!: Client[] 
+
+message!: string
+
+showDeleteConfirmation = false;
 
 constructor( private cs: ClientsService) {}
 
@@ -18,12 +22,25 @@ constructor( private cs: ClientsService) {}
 
 
   ngOnInit() {
-    this.cs.getClients().subscribe(data => this.client = data)
+    this.cs.getCustomers().subscribe(data => this.client = data)
   }
 
-  deleteClient(id:Number){
-    console.log("et oui");
-    
+  deleteClient(id:number){
+    alert('voulez vraiment supprimer ce client')
+    this.cs.deleteCustomer(id).subscribe(()=>{
+      
+      this.ngOnInit()
+    });
+  }
+
+  openModal() {
+    this.showDeleteConfirmation = true;
+    this.message = `voulez vous supprimer ce client `
+    console.log(this.showDeleteConfirmation);
+  }
+
+  closeModal() {
+    this.showDeleteConfirmation = false;
   }
 
 }

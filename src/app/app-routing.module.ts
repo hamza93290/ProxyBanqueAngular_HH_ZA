@@ -10,11 +10,13 @@ import { CreateconseillerComponent } from './createconseiller/createconseiller.c
 import { UpdateconseillerComponent } from './updateconseiller/updateconseiller.component';
 import { VirementComponent } from './virement/virement.component';
 import { ListecomptesComponent } from './listecomptes/listecomptes.component';
+import { AuditComponent } from './audit/audit.component';
 
 
 const routes: Routes = [
   {path :"", component: LoginComponent},
   {path:"listClients", component : ListclientsComponent},
+  {path:"audit", component : AuditComponent},
   {path:"nouveauClient", component : CreateclientComponent},
   {path:"modifierClient/:id", component : UpdateclientComponent},
   {path:"listConseillers", component : ListeconseillerComponent},
